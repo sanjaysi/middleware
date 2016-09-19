@@ -8,9 +8,9 @@ class UserList extends Component {
     this.props.actions.fetchUsers();
   }
 
-  renderUser(user) {
+  renderUser(user, idx) {
     return (
-      <div className="card card-block">
+      <div key={idx} className="card card-block">
         <h4 className="card-title">{user.name}</h4>
         <p className="card-text">Cheese Factory</p>
         <a className="btn btn-primary">Email</a>
@@ -21,7 +21,7 @@ class UserList extends Component {
   render() {
     return (
       <div>
-        {this.props.users.map(this.renderUser)}
+        {this.props.users.map((user, idx) => this.renderUser(user, idx))}
       </div>
     );
   }
