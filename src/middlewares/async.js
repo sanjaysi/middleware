@@ -21,11 +21,12 @@ export default function({dispatch}) {
     }
 }
 
-// ES6
-// export default function({dispatch}) {
-//     return next => action => {
-//         console.log(action);
+/* ES6
+export default function({dispatch}) {
+    return next => action => {
+        console.log(action);
 
-//         next(action);
-//     };
-// }
+        next(action);
+    };
+}
+*/
