@@ -12,15 +12,15 @@ class UserList extends Component {
     return (
       <div key={idx} className="card card-block">
         <h4 className="card-title">{user.name}</h4>
-        <p className="card-text">Cheese Factory</p>
-        <a className="btn btn-primary">Email</a>
+        <p className="card-text">{user.company.name}</p>
+        <button type="button" className="btn btn-primary btn-sm" href={user.website}>Website</button>
       </div>
     );
   }
 
   render() {
     return (
-      <div>
+      <div className="user-list">
         {this.props.users.map((user, idx) => this.renderUser(user, idx))}
       </div>
     );
